@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      LCA Tarjan�����㷨 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="darkness12138">
+    
+    
+
+    <meta name="description" content="���صĽ�������LCA���⣬��Least Common Ancestors,���������������⣬����һ����T�ٸ���һЩ��ѯLCA��u,v��������ѯ���ϴ���ʱ�򣩣�ÿ�β�ѯ�Ķ���u��v�����ȣ�����������ѯ�ĵ������Ⱦ����ܵ��">
+<meta name="keywords">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LCA Tarjan�����㷨">
+<meta property="og:url" content="http://yoursite.com/speech/try.html">
+<meta property="og:site_name" content="智冠国际象棋">
+<meta property="og:description" content="���صĽ�������LCA���⣬��Least Common Ancestors,���������������⣬����һ����T�ٸ���һЩ��ѯLCA��u,v��������ѯ���ϴ���ʱ�򣩣�ÿ�β�ѯ�Ķ���u��v�����ȣ�����������ѯ�ĵ������Ⱦ����ܵ��">
+<meta property="og:updated_time" content="2017-02-04T11:38:09.017Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LCA Tarjan�����㷨">
+<meta name="twitter:description" content="���صĽ�������LCA���⣬��Least Common Ancestors,���������������⣬����һ����T�ٸ���һЩ��ѯLCA��u,v��������ѯ���ϴ���ʱ�򣩣�ÿ�β�ѯ�Ķ���u��v�����ȣ�����������ѯ�ĵ������Ⱦ����ܵ��">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">智冠国际象棋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/speech" title="" class="">历次活动</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于我们</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">联系我们</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">LCA Tarjan�����㷨</h1>
+
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="���صL���"><a href="#���صL���" class="headerlink" title="���صĽ���"></a>���صĽ���</h1><h2 id="����"><a href="#����" class="headerlink" title="����"></a>����</h2><p>LCA���⣬��Least Common Ancestors,���������������⣬����һ����T�ٸ���һЩ��ѯLCA��u,v��������ѯ���ϴ���ʱ�򣩣�ÿ�β�ѯ�Ķ���u��v�����ȣ�����������ѯ�ĵ������Ⱦ����ܵ��<br><a id="more"></a></p>
+<h2 id="����LCA�����k���"><a href="#����LCA�����k���" class="headerlink" title="����LCA�����ķ���"></a>����LCA�����ķ���</h2><p>�߶�����Tarjan��RMQ������</p>
+<h2 id="LCA��������ʽ"><a href="#LCA��������ʽ" class="headerlink" title="LCA��������ʽ"></a>LCA��������ʽ</h2><p>����һ���������������ɸ���ѯÿ����ѯҪ��ָ���ڵ�u��v��������������</p>
+<h2 id="����˼·"><a href="#����˼·" class="headerlink" title="����˼·"></a>����˼·</h2><p>�������㷨����ÿ����ѯ���д�����������<br>�������㷨�������봦��֮������ÿһ����ѯ��������</p>
+<h2 id="�㷨˼·"><a href="#�㷨˼·" class="headerlink" title="�㷨˼·"></a>�㷨˼·</h2><p>Tarjan�����㷨�ǻ���DFS�Ͳ��鼯��һ���㷨���㷨�Ӹ��ڵ㿪ʼÿ�εݹ��������е��������ٴ�����ǰ���ڵ����ص����в�ѯ��<br>ÿ����������n��ʱ�򣬾ʹ���һ�����ڸõ��ļ��ϣ��������ϵ���������n�Լ����������ݹ�����n�����е�������ÿ������һ��������ʱ���ͰѸ������ļ�����n�������������������Ұ������ϲ�֮���ļ��ϵ�������Ϊn����Ϊ���������ڵ��Ѿ���ѯ�����ˣ�n�����������ڵ������ŵ�LCA����һ���ģ���Ϊ��ǰ�ڵ�x�����е�������������֮��������ǰ���ڵ�n�Ĳ�ѯ������n�����в�ѯ����������ѯ������һ�����Ѿ��������ˣ���ôn��v��LCA��Ϊv���ڵļ��ϵ����ȡ�</p>
+<h2 id="�ܽ�"><a href="#�ܽ�" class="headerlink" title="�ܽ�"></a>�ܽ�</h2><p>�����ײ㿪ʼ���ϱ����ϲ�������ֱ��������ѯ�Ľڵ㶼�Ѿ������ǹ��ˣ���ô��ǰλ�����ڵĸ���Ϊ������ҪѰ�ҵ�LCA��u,v��</p>
+<h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line">typedef int mytype;</div><div class="line">const int NV=40005;</div><div class="line">const int NE=NV;</div><div class="line">const int NQ=10005;</div><div class="line">mytype dis[NV],ans[NV];</div><div class="line">int vis[NV],he[NV],hq[NV],ecnt,qcnt;</div><div class="line">struct edge</div><div class="line">&#123;</div><div class="line">    int v,next;</div><div class="line">    mytype l;</div><div class="line">&#125; E[2*NE];</div><div class="line">struct quer</div><div class="line">&#123;</div><div class="line">    int v,next,i;</div><div class="line">&#125; q[2*NQ];</div><div class="line">void adde(int u,int v,mytype l)</div><div class="line">&#123;</div><div class="line">    E[++ecnt].v=v;</div><div class="line">    E[ecnt].l=l;</div><div class="line">    E[ecnt].next=he[u];</div><div class="line">    he[u]=ecnt;</div><div class="line">&#125;</div><div class="line">void addq(int u,int v,int i)</div><div class="line">&#123;</div><div class="line">    q[++qcnt].v=v;</div><div class="line">    q[qcnt].i=i;</div><div class="line">    q[qcnt].next=hq[u];</div><div class="line">    hq[u]=qcnt;</div><div class="line">&#125;</div><div class="line">int fa[NV],rk[NV];</div><div class="line">void init(int n,int m)</div><div class="line">&#123;</div><div class="line">    ecnt=0;</div><div class="line">    qcnt=0;</div><div class="line">    memset(vis,0,sizeof(vis));</div><div class="line">    memset(rk,0,sizeof(rk));</div><div class="line">    memset(he,-1,sizeof(he));</div><div class="line">    memset(hq,-1,sizeof(hq));</div><div class="line">    for (int i=1; i&lt;=m; i++)</div><div class="line">    &#123;</div><div class="line">        int u,v;</div><div class="line">        mytype l;</div><div class="line">        scanf(&quot;%d%d%d&quot;,&amp;u,&amp;v,&amp;l);</div><div class="line">        adde(u,v,l);</div><div class="line">        adde(v,u,l);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">int finds(int x)</div><div class="line">&#123;</div><div class="line">    int k,j,r;</div><div class="line">    r=x;</div><div class="line">    while(r!=fa[r])</div><div class="line">        r=fa[r];</div><div class="line">    k=x;</div><div class="line">    while(k!=r)</div><div class="line">    &#123;</div><div class="line">        j=fa[k];</div><div class="line">        fa[k]=r;</div><div class="line">        k=j;</div><div class="line">    &#125;</div><div class="line">    return r;</div><div class="line">&#125;</div><div class="line">void tarjan(int u,mytype d)</div><div class="line">&#123;</div><div class="line">    dis[u]=d;</div><div class="line">    fa[u]=u;</div><div class="line">    vis[u]=1;</div><div class="line">    for (int i=he[u]; i!=-1; i=E[i].next)</div><div class="line">        if (!vis[E[i].v])</div><div class="line">            tarjan(E[i].v,d+E[i].l),fa[E[i].v]=u;</div><div class="line">    for (int i=hq[u]; i!=-1; i=q[i].next)</div><div class="line">        if (vis[q[i].v])</div><div class="line">            ans[q[i].i]=dis[u]+dis[q[i].v]-2*dis[finds(q[i].v)];</div><div class="line">&#125;</div><div class="line">void solve(int n,int m)</div><div class="line">&#123;</div><div class="line">    init(n,m);</div><div class="line">    int k;</div><div class="line">    scanf(&quot;%d&quot;,&amp;k);</div><div class="line">    for (int i=1; i&lt;=k; i++)</div><div class="line">    &#123;</div><div class="line">        int u,v;</div><div class="line">        scanf(&quot;%d%d&quot;,&amp;u,&amp;v);</div><div class="line">        addq(u,v,i);</div><div class="line">        addq(v,u,i);</div><div class="line">    &#125;</div><div class="line">    tarjan(1,0);</div><div class="line">    for (int i=1; i&lt;=k; i++)</div><div class="line">        printf(&quot;%d\n&quot;,ans[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><p><a href="http://noalgo.info/476.html" target="_blank" rel="external">http://noalgo.info/476.html</a><br><a href="https://github.com/fz568573448/ACM-ICPC-Template/blob/master/%E6%A8%A1%E6%9D%BF/8_%E5%9B%BE%E8%AE%BA/13_LCA%E7%9A%84tarjan%E7%A6%BB%E7%BA%BF%E7%AE%97%E6%B3%95.cpp" target="_blank" rel="external">https://github.com/fz568573448/ACM-ICPC-Template/blob/master/%E6%A8%A1%E6%9D%BF/8_%E5%9B%BE%E8%AE%BA/13_LCA%E7%9A%84tarjan%E7%A6%BB%E7%BA%BF%E7%AE%97%E6%B3%95.cpp</a></p>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
