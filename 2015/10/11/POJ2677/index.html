@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      POJ2677 Tour | 智冠国际象棋 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="darkness12138">
+    
+    
+
+    <meta name="description" content="题目Description2000MS/65536KJohn Doe, a skilled pilot, enjoys traveling. While on vacation, he rents a small plane and starts visiting beautiful places. To save money, John must determine the shortest c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="POJ2677 Tour | 智冠国际象棋">
+<meta property="og:url" content="http://yoursite.com/2015/10/11/POJ2677/index.html">
+<meta property="og:site_name" content="智冠国际象棋">
+<meta property="og:description" content="题目Description2000MS/65536KJohn Doe, a skilled pilot, enjoys traveling. While on vacation, he rents a small plane and starts visiting beautiful places. To save money, John must determine the shortest c">
+<meta property="og:updated_time" content="2017-02-04T11:56:40.705Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="POJ2677 Tour | 智冠国际象棋">
+<meta name="twitter:description" content="题目Description2000MS/65536KJohn Doe, a skilled pilot, enjoys traveling. While on vacation, he rents a small plane and starts visiting beautiful places. To save money, John must determine the shortest c">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">智冠国际象棋</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">历次活动</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于我们</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">联系我们</a></li>
+              
+                
+                <li class="navigation__item"><a href="/" title="" class="">主页</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">POJ2677 Tour</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2015-10-11" class="post-meta__date date">2015-10-11</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/历次活动/">历次活动</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/ACM/">ACM</a>, <a class="tags-link" href="/tags/POJ/">POJ</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>2000MS/65536K<br>John Doe, a skilled pilot, enjoys traveling. While on vacation, he rents a small plane and starts visiting beautiful places. To save money, John must determine the shortest closed tour that connects his destinations. Each destination is represented by a point in the plane pi = &lt; xi,yi &gt;. John uses the following strategy: he starts from the leftmost point, then he goes strictly left to right to the rightmost point, and then he goes strictly right back to the starting point. It is known that the points have distinct x-coordinates.<br>Write a program that, given a set of n points in the plane, computes the shortest closed tour that connects the points according to John’s strategy.<br><a id="more"></a></p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>The program input is from a text file. Each data set in the file stands for a particular set of points. For each set of points the data set contains the number of points, and the point coordinates in ascending order of the x coordinate. White spaces can occur freely in input. The input data are correct.</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>For each set of data, your program should print the result to the standard output from the beginning of a line. The tour length, a floating-point number with two fractional digits, represents the result. An input/output sample is in the table below. Here there are two data sets. The first one contains 3 points specified by their x and y coordinates. The second point, for example, has the x coordinate 2, and the y coordinate 3. The result for each data set is the tour length, (6.47 for the first data set in the given example).</p>
+<h2 id="Simple-input"><a href="#Simple-input" class="headerlink" title="Simple input"></a>Simple input</h2><p>3<br>1 1<br>2 3<br>3 1<br>4<br>1 1<br>2 3<br>3 1<br>4 2</p>
+<h2 id="Simple-output"><a href="#Simple-output" class="headerlink" title="Simple output"></a>Simple output</h2><p>6.47<br>7.89</p>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><p>这个题的算法学名叫做“双调欧几里得旅行商问题”，即在平面上的n个点，确定一条闭合的线连接这n个点且使这条线最短，这类的问题建议只考虑双调旅程来化简，即严格按照从最左端邹至最右端，然后再从最右端走回最左端的出发点。<br>既然所求的结果是n个点连接成一个闭合的多边形，那么在这n个点中存在着这样的子结构，(i,j)为从i开始由右到左直到1，在由1开始由左到右直到j，这之间会经过1到max(i,j)之间的所有的点并且只有一次。定义这样最短的路线为d(i,j)<br>即我们最后要求的解则应该是d(n,n)<br>子结构分为三种情况:1.当j&lt;i-1时,2.当j=i-1的时候,3.当j=i时<br>1.当j&lt;i-1的时候，由我们子结构的定义可得点i-1一定在(i,j)上且从1出发向右的时候结尾一定是j，所以与i相邻的点一定是i-1，则(i,j)=(i-1,j)+dis(i-1,i).<br>2.当j=i-1的时候,与i相邻的点可以是1-i-1中的任意一个点（不包括i-1),因为最后要返回i-1且并不能确定哪一条路是最短的。则(i,j)=min{(k,j)+dis(i,k)}.<br>3.当j=i的时候，路径上最后两个相邻的点可以是1,2,3…..i-1中的任意一个点与i.则(i,i)=min{dis(i,1)+(i,1),dis(i,2)+(i,2),……,dis(i,i-1)+(i,i-1)}.</p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><p>1168K/0MS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">#include&lt;stdio.h&gt;</div><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;stdlib.h&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;math.h&gt;</div><div class="line">#include&lt;string.h&gt;</div><div class="line">#include&lt;string.h&gt;</div><div class="line">#include &lt;iomanip&gt;</div><div class="line">using namespace std;</div><div class="line">double dp[1000][1000];///用于记录两个点之间的最短路径</div><div class="line">//double tp[1000][1000];</div><div class="line">struct node</div><div class="line">&#123;</div><div class="line">    double x,y;</div><div class="line">&#125;;</div><div class="line">node point[10000];</div><div class="line">double cmp(node a,node b)</div><div class="line">&#123;</div><div class="line">    if(a.x!=b.x)</div><div class="line">        return a.x&lt;b.x;</div><div class="line">    else return a.y&lt;b.y;</div><div class="line">&#125;</div><div class="line">double distint(node a,node b)</div><div class="line">&#123;</div><div class="line">    return sqrt((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    /*while(1)</div><div class="line">    &#123;</div><div class="line">        double a,b;</div><div class="line">        double c,d;</div><div class="line">        scanf(&quot;%lf%lf%lf%lf&quot;,&amp;a,&amp;b,&amp;c,&amp;d);</div><div class="line">        printf(&quot;%.2lf\n&quot;,sqrt((a-c)*(a-c)+(b-d)*(b-d)));</div><div class="line">    &#125;*/</div><div class="line">    int n;</div><div class="line">    while(scanf(&quot;%d&quot;,&amp;n)!=EOF)</div><div class="line">    &#123;</div><div class="line">        memset(point,0,sizeof(point));</div><div class="line">        for(int i=1; i&lt;=n; i++)</div><div class="line">        &#123;</div><div class="line">            //scanf(&quot;%lf%lf&quot;,&amp;point[i].x,&amp;point[i].y);</div><div class="line">            cin&gt;&gt;point[i].x&gt;&gt;point[i].y;</div><div class="line">        &#125;</div><div class="line">        sort(point,point+n,cmp);</div><div class="line">        dp[1][2]=distint(point[1],point[2]);</div><div class="line">        for (int j = 3; j &lt;= n; ++j)</div><div class="line">        &#123;</div><div class="line">            for (int i = 1; i &lt;= j - 2; i++)///i&lt;j-1的时候，b[i][j]=b[j][i-1]+dis(i-1,i);</div><div class="line">                &#123;</div><div class="line">                    dp[i][j] = dp[i][j - 1] + distint(point[j-1],point[j]);</div><div class="line">                &#125;</div><div class="line">                dp[j-1][j]=999999;</div><div class="line">            for (int k = 1; k &lt;= j - 2; k++)///查找最短的距离，当j=i-1的时候。。i = j - 1,dp[i][j] = min(dp[k][j - 1] + dis(k,j));</div><div class="line">            &#123;</div><div class="line">                if(dp[k][j - 1] + distint(point[k],point[j])&lt;dp[j-1][j])</div><div class="line">                dp[j - 1][j] = dp[k][j - 1] + distint(point[k],point[j]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        dp[n][n]=dp[n-1][n]+distint(point[n-1],point[n]);</div><div class="line">        //printf(&quot;%.2lf\n&quot;,dp[n][n]);</div><div class="line">        cout.setf(ios::fixed);</div><div class="line">        cout&lt;&lt;setprecision(2)&lt;&lt;dp[n][n]&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="http://poj.org/problem?id=2677" target="_blank" rel="external">http://poj.org/problem?id=2677</a></p>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
